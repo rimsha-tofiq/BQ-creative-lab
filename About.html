@@ -58,6 +58,12 @@
     }
 
     nav a:hover { color: var(--primary); }
+          /* Styling for the active link */
+nav a.active {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+}
 
     .social-links a {
       margin-left: 10px;
@@ -231,6 +237,30 @@
             <a href="#" style="color: white; text-decoration: none;">Facebook</a>
         </div>
     </footer>
+     <script>document.addEventListener("DOMContentLoaded", function() {
+    // 1. Get the current URL path (e.g., /About.html)
+    const currentPath = window.location.pathname;
+    
+    // 2. Select all links inside the nav
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach(link => {
+        // 3. Get the href attribute of the link
+        const linkPath = link.getAttribute('href');
+
+        // 4. Check if the current path includes the link's path
+        // We use .includes or exact match depending on your file structure
+        if (currentPath.includes(linkPath)) {
+            link.classList.add('active');
+        }
+
+        // Special case: If path is just "/" or empty, highlight "Home"
+        if ((currentPath === "/" || currentPath === "/index.html") && linkPath === "index.html") {
+            link.classList.add('active');
+        }
+    });
+});</script>
 
 </body>
+
 </html>
