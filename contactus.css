@@ -1,0 +1,363 @@
+/* Custom Colors and Variables */
+:root {
+    --color-primary-dark: #000000;
+    --color-secondary-light: #efefef;
+    --color-background: #Ededed; /* Requested light grey background */
+    --color-accent:  black; /* Requested dark purple/maroon accent */
+    --color-green-accent: #4CFC0F; /* Bright Green from the image */
+    --font-family-main: 'Poppins', sans-serif;
+    --padding-sides: 6%;
+}
+
+/* Base Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-primary-dark);
+    font-family: var(--font-family-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--padding-sides);
+}
+
+a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+ul{
+    list-style: none;
+}
+
+header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 18px 36px;
+      font-size:13px;
+      color:#222;
+    }
+
+    header .left, header .right {display:flex;gap:22px;align-items:center}
+    header .left a, header .right a {color:#333;opacity:.85}
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:600;
+      letter-spacing:.6px;
+    }
+    .brand .mark {
+      
+      display:grid;place-items:center;font-size:1.5rem;
+    }
+
+
+/* Top Right Circle Logo */
+/* .bq-circle-logo-top {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-green-accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    position: absolute;
+    top: 20px;
+    right: var(--padding-sides);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+/* -------------------- */
+/* Hero Section (Heading) */
+/* -------------------- */
+
+.hero-section {
+    padding: 50px 0 30px 0;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.1;
+    max-width: 600px;
+}
+
+/* -------------------- */
+/* Contact Form Layout */
+/* -------------------- */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr; /* Adjusting ratio based on image */
+    gap: 30px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.form-area {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+.form-area input, .form-area textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-secondary-light);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.form-area input::placeholder, .form-area textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.name-fields div {
+    flex: 1;
+}
+
+.submit-button-form {
+    background-color: var(--color-green-accent);
+    color: var(--color-primary-dark);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 150px; /* Specific width as seen in the image */
+    margin-top: 15px;
+    float: right;
+}
+
+/* Right Side Info Box */
+.info-box {
+    background-color: var(--color-green-accent);
+    color: var(--color-primary-dark);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    height: 100%; /* Match height of form */
+}
+
+.info-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+
+
+/* -------------------- */
+/* Lower Contact Section (BQ Footer Style) */
+/* -------------------- */
+
+.lower-contact-section {
+    background-color: var(--color-secondary-light);
+    padding: 40px 0 80px 0;
+    margin-top: 80px;
+}
+
+.lower-contact-section .contact-heading {
+    margin-bottom: 10px;
+}
+
+.lower-form {
+    display: flex;
+    align-items: flex-end;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.lower-form .form-group {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.lower-form input[type="email"] {
+    background-color: var(--color-secondary-light);
+    border: none;
+    border-bottom: 1px solid var(--color-primary-dark);
+    color: var(--color-primary-dark);
+    padding: 10px 0;
+    border-radius: 0;
+}
+
+.lower-submit {
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-light);
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-bq-logo {
+    display: flex;
+    align-items: baseline;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.footer-creative-lab {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 10px;
+    color: var(--color-primary-dark);
+}
+
+/* -------------------- */
+/* Media Queries for Responsiveness */
+/* -------------------- */
+
+@media (max-width: 1024px) {
+    .nav-links, .social-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header adjustments for smaller screens */
+    header {
+        position: relative;
+    }
+    .nav-links, .social-links {
+        display: none; /* Hide for mobile menu access */
+    }
+    .nav-bar {
+        justify-content: center;
+    }
+    .logo-center {
+        position: static;
+        transform: none;
+    }
+    .bq-circle-logo-top {
+        position: static;
+        margin-left: 20px;
+    }
+
+    /* Main Content adjustments */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* Contact Form Layout Stack */
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        order: -1; /* Move info box above the form on mobile */
+        height: auto;
+    }
+
+    .star-accent {
+        display: none;
+    }
+
+    .submit-button-form {
+        float: none;
+        width: 100%;
+    }
+
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .name-fields div {
+        margin-bottom: 15px;
+    }
+
+    /* Lower Contact adjustments */
+    .lower-form {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: none;
+    }
+    .lower-form .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .lower-submit {
+        width: 100%;
+    }
+}
+  /* ---------- CONTACT ---------- */
+    .contact {
+      padding: 30px 36px 60px;
+    }
+
+    .contact .form {
+      background:#fff;border-radius:12px;padding:22px;width:360px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .contact label { display:block;font-size:13px;color:#333;margin-bottom:6px }
+    .contact input[type="email"] {
+      width:100%;padding:10px;border-radius:6px;border:1px solid #ddd;margin-bottom:12px;font-size:14px;
+    }
+    .submit {
+      background:#000;color:#fff;padding:8px 16px;border-radius:16px;border:0;
+      font-weight:700; cursor:pointer;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 26px 36px 60px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    footer .logo-big { font-weight:700 ;  }
+    footer .sub { font-size:13px;color:#222; }
+
+    /* ---------- Rounded big corners matching design ---------- */
+    .big-radius { border-radius:22px; }
+
+    /* ---------- Responsive (narrow screens) ---------- */
+    @media (max-width:1100px){
+      .page{width:94%}
+      .hero-grid { grid-template-columns: 1fr 160px 160px }
+    }
+    @media (max-width:860px){
+      .hero-grid{ grid-template-columns: 1fr }
+      .hero-lower{ grid-template-columns: 1fr 1fr }
+      .expertise { grid-template-columns: 1fr }
+      .services-inner { grid-template-columns: 1fr }
+      .services-second{ grid-template-columns: 1fr }
+      .services-left{ min-height:200px }
+      .contact .form{ width:100%}
+    }
